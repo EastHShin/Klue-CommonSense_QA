@@ -1,0 +1,82 @@
+openapi: 3.0.3
+
+info:
+
+  version: "1.0.0"
+  title: "Klue-CommonSense-model"
+  contact:
+    email: "easthshin@comcom.ai"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+  description: "Try using the QA model as a BERT model trained on CommonSense Data from [Mindslab](https://mindslab.ai:8080/kr/company)"
+    
+    
+servers:
+  - url: "https://main-klue-common-sense-qa-east-h-shin.endpoint.ainize.ai"
+
+paths:
+  /generate:
+    post:
+      summary: Get Response
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                context:
+                  type: string
+                question:
+                  type: string
+              required:
+                - context
+                - question
+      responses:
+        '200':
+          description: "Succesful Response"
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: "Bad Request Error"
+        '429':
+          description: "Too many requests"
+        '500':
+          description: "Server-side Error"
+# paths:
+#   /generate:
+#     post:
+#       requestBody:
+#         required: true
+#         content:
+#           multipart/form-data:
+#             schema:
+#               type: object
+#               properties:
+#                 context:
+#                   type: string
+#                 question:
+#                   type: string
+#               required:
+#                 - context
+#                 - question
+#       responses: # Set response
+#         '200':
+#           description: "Successful Response"
+#           content:
+#             application/json:
+#               schema:
+#                 type: object
+#         '400':
+#           description: "Bad Request Error"
+#         '429':
+#           description: "Too many requests"
+#         '500':
+#           description: "Server-side Error"
+
+externalDocs:
+  description: "Ainize"
+  url: "https://ainize.ai/explore"
