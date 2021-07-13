@@ -36,13 +36,20 @@ question: 질문
 ---
 ### Input example
 ```
-curl -X POST "https://main-klue-common-sense-qa-east-h-shin.endpoint.ainize.ai" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "context={}" -F "question={}"
+curl -X POST "https://main-klue-common-sense-qa-east-h-shin.endpoint.ainize.ai/generate" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "context={}" -F "question={}"
 ```
 
 ### Output example
 ```
 {
     "0": {}
+}
+```
+### API Health Check
+```
+$ curl --request GET "https://main-klue-common-sense-qa-east-h-shin.endpoint.ainize.ai/healthz"
+{
+  Health
 }
 ```
 
