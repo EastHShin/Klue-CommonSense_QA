@@ -1,6 +1,9 @@
 # Klue-CommonSense_QA
 
 ---
+[![Run on Ainize](https://ainize.ai/images/run_on_ainize_button.svg)](https://ainize.web.app/redirect?git_repo=https://github.com/EastHShin/Klue-CommonSense_QA)
+
+---
 
 Try using the QA model as a BERT model trained on CommonSense Data from [Mindslab](https://mindslab.ai:8080/kr/company)
 
