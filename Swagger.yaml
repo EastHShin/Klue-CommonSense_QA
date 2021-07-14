@@ -46,37 +46,6 @@ paths:
           description: "Too many requests"
         '500':
           description: "Server-side Error"
-# paths:
-#   /generate:
-#     post:
-#       requestBody:
-#         required: true
-#         content:
-#           multipart/form-data:
-#             schema:
-#               type: object
-#               properties:
-#                 context:
-#                   type: string
-#                 question:
-#                   type: string
-#               required:
-#                 - context
-#                 - question
-#       responses: # Set response
-#         '200':
-#           description: "Successful Response"
-#           content:
-#             application/json:
-#               schema:
-#                 type: object
-#         '400':
-#           description: "Bad Request Error"
-#         '429':
-#           description: "Too many requests"
-#         '500':
-#           description: "Server-side Error"
-
 externalDocs:
   description: "Ainize"
   url: "https://ainize.ai/explore"
