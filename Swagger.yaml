@@ -35,7 +35,7 @@ paths:
                 - question
       responses:
         '200':
-          description: "Succesful Response"
+          description: "Successful Response"
           content:
             application/json:
               schema:
